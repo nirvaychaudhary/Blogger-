@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+    <style>
+        * {
+            margin: 0;
+            margin-top: 10px;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        
+        .container {
+            color: green;
+            text-align: center;
+        }
+        
+        .namelist {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Authors list: </h1>
+        <br>
+        <hr> {% for m in data %}
+        <a href="{% url 'author-list' m.id%}" class="namelist">
+            <h2>{{m.full_name}}</h2>
+        </a>
+        <br>
+        <hr> {% endfor %}
+    </div>
+
+</body>
+
+</html>

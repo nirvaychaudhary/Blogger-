@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Author blogs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            color: #3F4142;
+            font-weight: 300;
+            font-size: 30px;
+        }
+        
+        .top {
+            text-align: center;
+        }
+        
+        .details {
+            color: #C70039;
+            letter-spacing: 2px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="top">Welcome</h1>
+        <br>
+        <hr> {%for ob in user_obj%}
+        <p class="details">{{ob.blog_content}}</p>
+        {% endfor%}
+        <br>
+
+
+
+    </div>
+
+</body>
+
+</html>

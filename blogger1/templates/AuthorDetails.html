@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+    <style>
+        * {
+            margin: ;
+            padding: 0;
+            text-decoration: none;
+        }
+        
+        .container {
+            color: #EE2C02;
+            text-align: center;
+        }
+        
+        .blog_list {
+            color: #11DCE5;
+        }
+        
+        .blog_list:hover {
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Authors blog-list: </h1>
+        <br>
+        <hr> {%for ob in obj%}
+        <a href="{% url 'author' ob.id %}" class="blog_list">
+            <h2>{{ob.blog_name}}</h2>
+        </a>
+        <br>
+        <hr> {% endfor%}
+        <br>
+
+
+
+    </div>
+
+</body>
+
+</html>
